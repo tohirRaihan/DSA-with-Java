@@ -40,7 +40,6 @@ public class TwoDimensionalArray {
   }
 
   // Traverse 2D array
-
   public void traverse2DArray() {
     for (int row = 0; row < arr.length; row++) {
       for (int col = 0; col < arr[0].length; col++) {
