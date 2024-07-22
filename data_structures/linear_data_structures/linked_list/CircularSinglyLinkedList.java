@@ -10,7 +10,7 @@ public class CircularSinglyLinkedList {
   private Node tail;
   private int size;
 
-  public Node createCSLL(int nodeValue) {
+  public CircularSinglyLinkedList createCSLL(int nodeValue) {
     head = new Node();
     Node node = new Node();
     node.value = nodeValue;
@@ -18,7 +18,7 @@ public class CircularSinglyLinkedList {
     head = node;
     tail = node;
     size = 1;
-    return head;
+    return this;
   }
 
   // Insertion Method
@@ -132,8 +132,7 @@ public class CircularSinglyLinkedList {
   }
 
   public static void main(String[] args) {
-    CircularSinglyLinkedList csll = new CircularSinglyLinkedList();
-    csll.createCSLL(5);
+    CircularSinglyLinkedList csll = new CircularSinglyLinkedList().createCSLL(5);
     csll.insertCSLL(4, 0);
     csll.insertCSLL(6, 1);
     csll.insertCSLL(7, 8);
