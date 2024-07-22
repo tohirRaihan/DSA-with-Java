@@ -49,6 +49,24 @@ public class SinglyLinkedList {
     size++;
   }
 
+  // get value from SinglyLinkedList
+  public int getValue(int location) {
+    if (head == null) {
+      System.out.println("List is empty");
+      return Integer.MIN_VALUE;
+    } else if (location >= size) {
+      return tail.value;
+    } else {
+      Node tempNode = head;
+      int index = 0;
+      while (index <= location - 1) {
+        tempNode = tempNode.next;
+        index++;
+      }
+      return tempNode.value;
+    }
+  }
+
   // SinglyLinkedList Traversal
   public void traverseSinglyLinkedList() {
     if (head == null) {
@@ -120,6 +138,11 @@ public class SinglyLinkedList {
     head = null;
     tail = null;
     System.out.println("The SLL deleted successfully");
+  }
+
+//  isEmpty
+  public boolean isEmpty() {
+    return this.head == null;
   }
 
   public static void main(String[] args) {
