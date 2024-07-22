@@ -10,7 +10,7 @@ public class SinglyLinkedList {
   private Node tail;
   private int size;
 
-  public Node createSinglyLinkedList(int nodeValue) {
+  public SinglyLinkedList createSLL(int nodeValue) {
     head = new Node();
     Node node = new Node();
     node.next = null;
@@ -18,7 +18,7 @@ public class SinglyLinkedList {
     head = node;
     tail = node;
     size = 1;
-    return head;
+    return this;
   }
 
   // Insert Method SinglyLinkedList
@@ -26,7 +26,7 @@ public class SinglyLinkedList {
     Node node = new Node();
     node.value = nodeValue;
     if (head == null) {
-      createSinglyLinkedList(nodeValue);
+      createSLL(nodeValue);
       return;
     } else if (location == 0) {
       node.next = head;
@@ -123,8 +123,7 @@ public class SinglyLinkedList {
   }
 
   public static void main(String[] args) {
-    SinglyLinkedList sLL = new SinglyLinkedList();
-    sLL.createSinglyLinkedList(5);
+    SinglyLinkedList sLL = new SinglyLinkedList().createSLL(5);
     sLL.insertInLinkedList(6, 1);
     sLL.insertInLinkedList(7, 3);
     sLL.insertInLinkedList(8, 4);
