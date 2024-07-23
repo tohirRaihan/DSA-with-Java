@@ -140,9 +140,14 @@ public class SinglyLinkedList {
     System.out.println("The SLL deleted successfully");
   }
 
-//  isEmpty
+  // isEmpty
   public boolean isEmpty() {
     return this.head == null;
+  }
+
+  // getSize
+  public int getSize() {
+    return this.size;
   }
 
   public static void main(String[] args) {
