@@ -22,7 +22,7 @@ public class StackWithSLL {
 
   // Pop method
   public int pop() {
-    int result = -1;
+    int result = Integer.MIN_VALUE;
     if (isEmpty()) {
       System.out.println("The Stack is Empty!");
     } else {
@@ -36,7 +36,7 @@ public class StackWithSLL {
   public int peek() {
     if (isEmpty()) {
       System.out.println("The Stack is Empty!");
-      return -1;
+      return Integer.MIN_VALUE;
     } else {
       return linkedList.getValue(0);
     }
