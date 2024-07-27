@@ -9,7 +9,7 @@ public class LinearQueueWithArray {
     this.arr = new int[size];
     this.topOfQueue = -1;
     this.beginningOfQueue = -1;
-    System.out.println("The Queue is succesffully created with size of: " + size);
+    System.out.println("The Queue is successfully created with size of: " + size);
   }
 
   // IsFull
@@ -30,11 +30,11 @@ public class LinearQueueWithArray {
       beginningOfQueue = 0;
       topOfQueue++;
       arr[topOfQueue] = value;
-      System.out.println("Succesffully inserted " + value + " in the queue");
+      System.out.println("successfully inserted " + value + " in the queue");
     } else {
       topOfQueue++;
       arr[topOfQueue] = value;
-      System.out.println("Succesffully inserted " + value + " in the queue");
+      System.out.println("successfully inserted " + value + " in the queue");
     }
   }
 
