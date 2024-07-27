@@ -15,7 +15,7 @@ accomplish a task.
     - Float
     - Character
     - Boolean
-- Non Primitive
+- Non-Primitive
     - Linear
         - Static
             - Array
