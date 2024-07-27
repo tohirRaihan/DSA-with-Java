@@ -26,3 +26,13 @@ Queue is a data structure that stores items in a First-In/First-Out manner.
 | isEmpty                |     `O(1)`      |      `O(1)`      |
 | isFull                 |     `O(1)`      |      `O(1)`      |
 | Delete Entire Queue    |     `O(1)`      |      `O(1)`      |
+
+### Time and Space Complexity of Queue using Linked List
+| Queue - Linked List | Time Complexity | Space Complexity |
+|---------------------|:---------------:|:----------------:|
+| Create Queue        |     `O(1)`      |      `O(n)`      |
+| enQueue             |     `O(1)`      |      `O(1)`      |
+| deQueue             |     `O(1)`      |      `O(1)`      |
+| Peek                |     `O(1)`      |      `O(1)`      |
+| isEmpty             |     `O(1)`      |      `O(1)`      |
+| Delete Entire Queue |     `O(1)`      |      `O(1)`      |
