@@ -56,3 +56,11 @@ is basically reversed from a real life tree.
 | Search for a node         | `O(n)`          | `O(n)`           |
 | Traverse Binary Tree      | `O(n)`          | `O(n)`           |
 | Delete Entire Binary Tree | `O(1)`          | `O(1)`           |
+---
+
+### What is a Binary Search Tree?
+- In the left subtree the value of a node is less than or equal to its parent node's value
+- In the right subtree the value of a node is greater than its parent node's value
+
+### Why Binary Search Tree?
+- It performs faster than Binary Tree when inserting and deleting nodes
