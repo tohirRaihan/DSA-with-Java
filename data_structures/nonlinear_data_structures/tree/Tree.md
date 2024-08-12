@@ -13,6 +13,17 @@ is basically reversed from a real life tree.
 - There are many different types of data structures which performs better in various situations
     - Binary Search Tree, AVL Tree, Red Black Tree, Trie
 
+### Tree Terminology
+- **Root:** top node without parent
+- **Edge:** a link between parent and child
+- **Leaf:** a node which does not have children
+- **Sibling:** children of same parent
+- **Ancestor:** parent, grandparent, great grandparent of a node
+- **Depth of a node:** a length of the path from root to node
+- **Height of node:** a length of the path from the node to the deepest node
+- **Depth of tree:** depth of root node
+- **Height of tree:** height of root node
+
 ### Binary Tree
 - Binary trees are the datastructures in which each node has at most two children, often referred to as the left and
   right children
@@ -21,7 +32,13 @@ is basically reversed from a real life tree.
     - Linked List
     - Array
 
-**Binary Tree Common Operations:**
+### Types of Binary Tree:
+- **Full Binary Tree:** Each node of binary tree has zero or two children but not one
+- **Perfect Binary Tree:** All non leaf node have two children, and they are at the same depth
+- **Complete Binary Tree:** All levels are completely filled except the last level
+- **Balanced Binary Tree:** Each leaf is not more than a certain distance from the root node than any other leaf
+
+### Binary Tree Common Operations:
 - Creation of Tree
 - Insertion of a node
 - Deletion of a node
@@ -29,7 +46,7 @@ is basically reversed from a real life tree.
 - Traverse all nodes
 - Deletion of tree
 
-**Binary Tree Traversal:**
+### Binary Tree Traversal:
 - Depth first search
     - Preorder traversal
     - Inorder traversal
