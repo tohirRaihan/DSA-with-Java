@@ -21,8 +21,12 @@ is basically reversed from a real life tree.
 - **Ancestor:** parent, grandparent, great grandparent of a node
 - **Depth of a node:** a length of the path from root to node
 - **Height of node:** a length of the path from the node to the deepest node
-- **Depth of tree:** depth of root node
+- **Depth of tree:** the maximum depth among all the nodes in the tree
 - **Height of tree:** height of root node
+- **size of a node:** the number of descendants it has including itself
+- **skew trees:** if every node in a tree has only one child (except leaf nodes)
+    - **left skew trees:** if every node has only left child
+    - **right skew trees:**  if every node has only right child
 
 ### Binary Tree
 - Binary trees are the datastructures in which each node has at most two children, often referred to as the left and
@@ -81,3 +85,39 @@ is basically reversed from a real life tree.
 
 ### Why Binary Search Tree?
 - It performs faster than Binary Tree when inserting and deleting nodes
+
+### Time and Space Complexity of Binary Search Tree
+| BST                       | Time Complexity | Space Complexity |
+|---------------------------|-----------------|------------------|
+| Create BST                | `O(1)`          | `O(1)`           |
+| Insert a node             | `O(logN)`       | `O(logN)`        |
+| Delete a node             | `O(logN)`       | `O(logN)`        |
+| Search for a node         | `O(logN)`       | `O(logN)`        |
+| Traverse Binary Tree      | `O(n)`          | `O(n)`           |
+| Delete Entire Binary Tree | `O(1)`          | `O(1)`           |
+---
+
+### What is an AVL Tree?
+An AVL tree is a self-balancing Binary Search Tree (BST) where the difference between heights of left and right subtrees
+cannot be more than one for all nodes.
+
+If at any time heights of left and right subtrees differ by more than one, then rebalancing is done to restore AVL
+property, this process is called **rotation**
+
+### Why do we need AVL Tree?
+The primary reason for using AVL trees is to guarantee efficient search, insertion, and deletion operations in
+logarithmic time complexity (O(log n)).
+
+### Insert a node in AVL Tree
+- Case 1: Rotation is not required
+- Case 2: Rotation is required
+    - LL - left left condition
+        - Right rotation
+    - LR - left right condition
+        - Left rotation (for left child)
+        - Right rotation
+    - RR - right right condition
+        - Left rotation 
+    - RL - right left condition
+        - Right rotation (for right child)
+        - Left rotation
