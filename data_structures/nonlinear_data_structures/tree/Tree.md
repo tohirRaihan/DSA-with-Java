@@ -87,14 +87,14 @@ is basically reversed from a real life tree.
 - It performs faster than Binary Tree when inserting and deleting nodes
 
 ### Time and Space Complexity of Binary Search Tree
-| BST                       | Time Complexity | Space Complexity |
-|---------------------------|-----------------|------------------|
-| Create BST                | `O(1)`          | `O(1)`           |
-| Insert a node             | `O(logN)`       | `O(logN)`        |
-| Delete a node             | `O(logN)`       | `O(logN)`        |
-| Search for a node         | `O(logN)`       | `O(logN)`        |
-| Traverse Binary Tree      | `O(n)`          | `O(n)`           |
-| Delete Entire Binary Tree | `O(1)`          | `O(1)`           |
+| BST               | Time Complexity | Space Complexity |
+|-------------------|-----------------|------------------|
+| Create BST        | `O(1)`          | `O(1)`           |
+| Insert a node     | `O(logN)`       | `O(logN)`        |
+| Delete a node     | `O(logN)`       | `O(logN)`        |
+| Search for a node | `O(logN)`       | `O(logN)`        |
+| Traverse BST      | `O(n)`          | `O(n)`           |
+| Delete Entire BST | `O(1)`          | `O(1)`           |
 ---
 
 ### What is an AVL Tree?
@@ -117,7 +117,46 @@ logarithmic time complexity (O(log n)).
         - Left rotation (for left child)
         - Right rotation
     - RR - right right condition
-        - Left rotation 
+        - Left rotation
     - RL - right left condition
         - Right rotation (for right child)
         - Left rotation
+
+### Delete a node from AVL Tree
+- Case 1: Rotation is not required
+    - The node to be deleted is a leaf node
+    - The node to be deleted has a child node
+    - The node to be deleted has two children node
+- Case 2: Rotation is required
+    - LL - left left condition
+        - Right rotation
+    - LR - left right condition
+        - Left rotation (for left child)
+        - Right rotation
+    - RR - right right condition
+        - Left rotation
+    - RL - right left condition
+        - Right rotation (for right child)
+        - Left rotation
+
+### Time and Space Complexity of AVL Tree
+| AVL Tree               | Time Complexity | Space Complexity |
+|------------------------|-----------------|------------------|
+| Create AVL             | `O(1)`          | `O(1)`           |
+| Insert a node          | `O(logN)`       | `O(logN)`        |
+| Delete a node          | `O(logN)`       | `O(logN)`        |
+| Search for a node      | `O(logN)`       | `O(logN)`        |
+| Traverse AVL Tree      | `O(n)`          | `O(n)`           |
+| Delete Entire AVL Tree | `O(1)`          | `O(1)`           |
+---
+
+### Time Complexity of BST(skew trees) vs AVL Tree
+| BST                | BST    | AVL       |
+|--------------------|--------|-----------|
+| Create Tree        | `O(1)` | `O(1)`    |
+| Insert a node      | `O(N)` | `O(logN)` |
+| Delete a node      | `O(N)` | `O(logN)` |
+| Search for a node  | `O(N)` | `O(logN)` |
+| Traverse Tree      | `O(N)` | `O(N)`    |
+| Delete Entire Tree | `O(1)` | `O(1)`    |
+---
