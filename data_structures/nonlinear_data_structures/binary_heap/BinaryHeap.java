@@ -1,7 +1,7 @@
 package data_structures.nonlinear_data_structures.binary_heap;
 
 public class BinaryHeap {
-  int arr[];
+  int[] arr;
   int sizeOfTree;
 
   public BinaryHeap(int size) {
@@ -11,11 +11,7 @@ public class BinaryHeap {
   }
 
   public boolean isEmpty() {
-    if (sizeOfTree == 0) {
-      return true;
-    } else {
-      return false;
-    }
+    return sizeOfTree == 0;
   }
 
   public Integer peek() {
@@ -43,18 +39,16 @@ public class BinaryHeap {
     if (index <= 1) {
       return;
     }
-    if (heapType == "Min") {
+    if (heapType.equals("Min")) {
       if (arr[index] < arr[parent]) {
         int tmp = arr[index];
         arr[index] = arr[parent];
         arr[parent] = tmp;
       }
-    } else if (heapType == "Max") {
-      if (arr[index] > arr[parent]) {
-        int tmp = arr[index];
-        arr[index] = arr[parent];
-        arr[parent] = tmp;
-      }
+    } else if (heapType.equals("Max") && (arr[index] > arr[parent])) {
+      int tmp = arr[index];
+      arr[index] = arr[parent];
+      arr[parent] = tmp;
     }
     heapifyBottomToTop(parent, heapType);
   }
@@ -74,7 +68,7 @@ public class BinaryHeap {
     if (sizeOfTree < left) {
       return;
     }
-    if (heapType == "Max") {
+    if (heapType.equals("Max")) {
       if (sizeOfTree == left) {
         if (arr[index] < arr[left]) {
           int tmp = arr[index];
@@ -94,7 +88,7 @@ public class BinaryHeap {
           arr[swapChild] = tmp;
         }
       }
-    } else if (heapType == "Min") {
+    } else if (heapType.equals("Min")) {
       if (sizeOfTree == left) {
         if (arr[index] > arr[left]) {
           int tmp = arr[index];
