@@ -194,12 +194,8 @@ public class AVLTree {
         node = null;
       }
     }
+
     // Case 2 - rotation required
-
-    // System.out.println("1");
-    // System.out.println(previous.value);
-
-    // node.height = 1 + Math.max(getHeight(node.left), getHeight(node.right));
     int balance = getBalance(node);
 
     if (balance > 1 && getBalance(node.left) >= 0) {
