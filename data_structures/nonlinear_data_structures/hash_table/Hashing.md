@@ -30,11 +30,13 @@ indexed using keys commonly created by formulas.
 
 ### Collision Resolution Techniques:
 The process of finding an alternate location is called collision resolution.
-- Direct Chaining
-- Open Addressing
-    - Linear Probing
-    - Quadratic Probing
-    - Double Hashing
+``` mermaid
+    flowchart TD
+        RS[Resolution Techniques] --> DC[Direct Chaining] & OA[Open Addressing]
+        OA --> LP[Linear Probing]
+        OA --> QP[Quadratic Probing]
+        OA --> DH[Double Hashing]
+```
 
 **Direct Chaining:** Implements the buckets as linked list. Colliding elements are stored in these lists.
 
