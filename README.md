@@ -10,20 +10,19 @@ accomplish a task.
 - Efficiency
 
 ### Types of Data Structure
-- Primitive
-    - Integer
-    - Float
-    - Character
-    - Boolean
-- Non-Primitive
-    - Linear
-        - Static
-            - Array
-        - Dynamic
-            - Linked List
-            - Stack
-            - Queue
-    - Non Linear
-        - Tree
-        - Graph
-        
+``` mermaid
+    flowchart TD
+        DS[Data Structure] --> P[Primitive] & NP[Non-Primitive]
+        P --> Integer
+        P --> Float
+        P --> Character
+        P --> Boolean
+        NP --> L[Linear] & NL[Non Linear]
+        L --> S[Static] & D[Dynamic]
+        S --> Array
+        D --> LL[Linked List]
+        D --> Stack
+        D --> Queue
+        NL --> Tree
+        NL --> Graph
+```
