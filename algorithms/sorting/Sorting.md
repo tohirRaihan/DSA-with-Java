@@ -43,3 +43,8 @@ flowchart TD
 - Merge Sort
 - Quick Sort
 - Heap Sort
+
+**Criteria for selecting a sorting algorithm:**
+- Stability
+- Space efficient
+- Time efficient
