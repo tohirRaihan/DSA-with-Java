@@ -6,7 +6,7 @@ indexed using keys commonly created by formulas.
 - It is time efficient in case of SEARCH Operation (when there is less collision)
 
 | Data Structure | Time Complexity for SEARCH |
-|----------------|----------------------------|
+| -------------- | -------------------------- |
 | Array          | `O(logN)`                  |
 | Linked List    | `O(N)`                     |
 | Tree           | `O(logN)`                  |
@@ -19,7 +19,7 @@ indexed using keys commonly created by formulas.
 - **Hash Table:** It is a data structure which implements an associative array abstract data type, a structure that can
   map keys to values
 - **Collision:** A collision occurs when two different keys to a hash function produce the same output
-- **Load Factor** The number of items stored in the table divided by the size of the table
+- $\displaystyle\bold{Load\space Factor} = \frac{Number\space of\space elements\space in\space Hash\space Table}{Hash\space Table\space size}$
 
 ### Properties of a good Hash Function:
 - Minimize collision
@@ -31,20 +31,21 @@ indexed using keys commonly created by formulas.
 ### Collision Resolution Techniques:
 The process of finding an alternate location is called collision resolution.
 ``` mermaid
-    flowchart TD
-        RS[Resolution Techniques] --> DC[Direct Chaining] & OA[Open Addressing]
-        OA --> LP[Linear Probing]
-        OA --> QP[Quadratic Probing]
-        OA --> DH[Double Hashing]
+flowchart TD
+    RS[Resolution Techniques] --> DC[Direct Chaining] & OA[Open Addressing]
+    OA --> LP[Linear Probing]
+    OA --> QP[Quadratic Probing]
+    OA --> DH[Double Hashing]
 ```
 
 **Direct Chaining:** Implements the buckets as linked list. Colliding elements are stored in these lists.
 
 **Open Addressing:** Colliding elements are stored in other vacant buckets. During storage and lookup these are found
 through so called probing.
-- **Linear Probing:** It places new key into the closest following empty cell.
-- **Quadratic Probing:** Adding arbitrary quadratic polynomial to the index until an empty cell is found.
-- **Double Hashing:** Interval between probes is computed by another hash function.
+- **Linear Probing:** It places new key into the closest following empty cell. One of the problems with linear probing is that table items tend to cluster together in the hash table. Thus, the one part of the table might be quite dense, even though another part has relatively few items. Clustering causes long probe searches and therefore decreases the overall efficiency.
+- **Quadratic Probing:** Adding arbitrary quadratic polynomial to the index until an empty cell is found. The problem of
+Clustering can be eliminated if we use the quadratic probing method.
+- **Double Hashing:** Interval between probes is computed by another hash function. Double hashing reduces clustering in a better way.
 
 ### If Hash Table is Full
 what will happen if the hash table is full?
@@ -74,7 +75,7 @@ what will happen if the hash table is full?
 - When Hash function is not good enough, Insertion/Deletion/Search operations take `O(N)` time.
 
 | Operations | Array  | Linked List | Tree      | Hashing     |
-|------------|--------|-------------|-----------|-------------|
+| ---------- | ------ | ----------- | --------- | ----------- |
 | Insertion  | `O(N)` | `O(N)`      | `O(logN)` | `O(1)/O(N)` |
 | Deletion   | `O(N)` | `O(N)`      | `O(logN)` | `O(1)/O(N)` |
 | Search     | `O(N)` | `O(N)`      | `O(logN)` | `O(1)/O(N)` |
