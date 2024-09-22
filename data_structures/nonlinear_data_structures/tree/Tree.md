@@ -42,6 +42,53 @@ is basically reversed from a real life tree.
 - **Complete Binary Tree:** All levels are completely filled except the last level
 - **Balanced Binary Tree:** Each leaf is not more than a certain distance from the root node than any other leaf
 
+``` mermaid
+graph TD
+    subgraph Perfect Binary Tree
+        AA((1))-->BB((2))
+        AA-->CC((3))
+        BB-->DD((4))
+        BB-->EE((5))
+        CC-->FF((6))
+        CC-->GG((7))
+        style ZZ color:transparent, fill: transparent, stroke:transparent
+    end
+
+    subgraph Full Binary Tree
+        A((1))-->B((2))
+        A-->C((3))
+        B-->D((4))
+        B-->E((5))
+        D-->H((6))
+        D-->I((7))
+        style Z color:transparent, fill: transparent, stroke:transparent
+    end
+```
+``` mermaid
+graph TD
+    subgraph Balanced Binary Tree
+        A((1))-->B((2))
+        A-->C((3))
+        B-->D((4))
+        B-->E((5))
+        C~~~F((6))
+        C-->G((7))
+        style F color:transparent, fill: transparent, stroke:transparent
+    end
+
+    subgraph Complete Binary Tree
+        AA((1))-->BB((2))
+        AA-->CC((3))
+        BB-->DD((4))
+        BB-->EE((5))
+        CC-->FF((6))
+        CC-->GG((7))
+        DD-->HH((8))
+        DD-->II((9))
+        style ZZ color:transparent, fill: transparent, stroke:transparent
+    end
+```
+
 ### Binary Tree Common Operations:
 - Creation of Tree
 - Insertion of a node
@@ -60,7 +107,7 @@ is basically reversed from a real life tree.
 
 ### Time and Space Complexity of Binary Tree using Array
 | Binary Tree               | Time Complexity | Space Complexity |
-|---------------------------|-----------------|------------------|
+| ------------------------- | --------------- | ---------------- |
 | Create Binary Tree        | `O(1)`          | `O(n)`           |
 | Insert a node             | `O(1)`          | `O(1)`           |
 | Delete a node             | `O(n)`          | `O(1)`           |
@@ -70,7 +117,7 @@ is basically reversed from a real life tree.
 
 ### Time and Space Complexity of Binary Tree using Linked List
 | Binary Tree               | Time Complexity | Space Complexity |
-|---------------------------|-----------------|------------------|
+| ------------------------- | --------------- | ---------------- |
 | Create Binary Tree        | `O(1)`          | `O(1)`           |
 | Insert a node             | `O(n)`          | `O(n)`           |
 | Delete a node             | `O(n)`          | `O(n)`           |
@@ -88,7 +135,7 @@ is basically reversed from a real life tree.
 
 ### Time and Space Complexity of Binary Search Tree
 | BST               | Time Complexity | Space Complexity |
-|-------------------|-----------------|------------------|
+| ----------------- | --------------- | ---------------- |
 | Create BST        | `O(1)`          | `O(1)`           |
 | Insert a node     | `O(logN)`       | `O(logN)`        |
 | Delete a node     | `O(logN)`       | `O(logN)`        |
@@ -141,7 +188,7 @@ logarithmic time complexity (O(log n)).
 
 ### Time and Space Complexity of AVL Tree
 | AVL Tree               | Time Complexity | Space Complexity |
-|------------------------|-----------------|------------------|
+| ---------------------- | --------------- | ---------------- |
 | Create AVL             | `O(1)`          | `O(1)`           |
 | Insert a node          | `O(logN)`       | `O(logN)`        |
 | Delete a node          | `O(logN)`       | `O(logN)`        |
@@ -152,7 +199,7 @@ logarithmic time complexity (O(log n)).
 
 ### Time Complexity of BST(skew trees) vs AVL Tree
 | BST                | BST    | AVL       |
-|--------------------|--------|-----------|
+| ------------------ | ------ | --------- |
 | Create Tree        | `O(1)` | `O(1)`    |
 | Insert a node      | `O(N)` | `O(logN)` |
 | Delete a node      | `O(N)` | `O(logN)` |
