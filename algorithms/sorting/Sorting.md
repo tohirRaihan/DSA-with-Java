@@ -137,3 +137,25 @@ flowchart TD
 - Worst case complexity: `O(N logN)`
 - Worst case space complexity: `O(n)`
 ---
+
+### Merge Sort
+- Merge sort is a divide and conquer algorithm
+- Divide the input array in two halves and we keep halving recursively until they become too small that can not be broken further
+- Merge halves by sorting them
+
+**When to use Merge Sort?**
+- When you need stable sort
+- When average expected time is O(NlogN)
+
+**When to avoid Merge Sort?**
+- When space is a concern
+
+**Performance of Merge Sort:**
+- Worst case complexity: `O(N logN)`
+- Worst case space complexity: `O(n)`
+---
+
+### Quick Sort
+- Quick is a divide and conquer algorithm
+- Find pivot number and make sure smaller number located at the left of pivot and bigger numbers are located at the right of the pivot
+- Unlike merge sort extra space is not required
