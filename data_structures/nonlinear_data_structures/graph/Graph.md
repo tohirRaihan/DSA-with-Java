@@ -31,4 +31,7 @@ flowchart TD
 
 ### Graph Representation
 - **Adjacency Matrix:** an adjacency matrix is a square matrix or you can say it is a 2D array. And the elements of the matrix indicate whether pairs of vertices are adjacent or not in the graph.
+  - If a graph is complete or almost complete we should use **Adjacency Matrix**.
+
 - **Adjacency List:** an adjacency list is a collection of unordered list used to represent a graph. Each list describes the set of neighbors of a vertex in the graph.
+  - If the number of edges are few then we should use **Adjacency List**.
