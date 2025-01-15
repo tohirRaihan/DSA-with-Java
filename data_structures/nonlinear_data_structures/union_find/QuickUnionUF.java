@@ -16,16 +16,15 @@ class QuickUnionUF {
 
   // Time Complexity: O(n)
   public void union(int p, int q) {
-    int i = root(p);
-    int j = root(q);
-    id[i] = j;
+    int rootP = root(p);
+    int rootQ = root(q);
+    id[rootP] = rootQ;
   }
 
   private int root(int i) {
     while (i != id[i]) {
       i = id[i];
     }
-    
     return i;
   }
 }
