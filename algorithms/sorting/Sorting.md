@@ -17,9 +17,9 @@ flowchart TD
 
 ### Classification By Stability:
 - **Stable sorting:** If a sorting algorithm after sorting the contents does not change the sequence of similar content in which they appear, then this sorting is called stable sorting.
-    - **Example:** Insertion Sort
+    - **Example:** Insertion Sort, Merge Sort
 - **Unstable sorting:** If a sorting algorithm after sorting the content change the sequence of similar content in which they appear, then it is called unstable sorting.
-    - **Example:** Quick Sort
+    - **Example:** Selection Sort, Quick Sort
 
 ### Sorting Terminology:
 - **Increasing Order**
@@ -159,3 +159,10 @@ flowchart TD
 - Quick is a divide and conquer algorithm
 - Find pivot number and make sure smaller number located at the left of pivot and bigger numbers are located at the right of the pivot
 - Unlike merge sort extra space is not required
+
+**When to use Quick Sort?**
+- When average expected time is O(NlogN)
+
+**When to avoid Quick Sort?**
+- When space is a concern
+- When you need stable sort
